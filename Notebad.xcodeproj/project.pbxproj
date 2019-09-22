@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		04BC82CE232CDDFA002D8176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC82CD232CDDFA002D8176 /* AppDelegate.swift */; };
-		04BC82D0232CDDFA002D8176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC82CF232CDDFA002D8176 /* ViewController.swift */; };
+		04BC82D0232CDDFA002D8176 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC82CF232CDDFA002D8176 /* NoteViewController.swift */; };
 		04BC82D3232CDDFA002D8176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BC82D1232CDDFA002D8176 /* Main.storyboard */; };
 		04BC82D6232CDDFA002D8176 /* Notebad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04BC82D4232CDDFA002D8176 /* Notebad.xcdatamodeld */; };
 		04BC82D8232CDDFB002D8176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BC82D7232CDDFB002D8176 /* Assets.xcassets */; };
 		04BC82DB232CDDFB002D8176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BC82D9232CDDFB002D8176 /* LaunchScreen.storyboard */; };
+		04BC82E3232CDE7B002D8176 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC82E2232CDE7B002D8176 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04BC82CA232CDDFA002D8176 /* Notebad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notebad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BC82CD232CDDFA002D8176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04BC82CF232CDDFA002D8176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04BC82CF232CDDFA002D8176 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		04BC82D2232CDDFA002D8176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04BC82D5232CDDFA002D8176 /* Notebad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notebad.xcdatamodel; sourceTree = "<group>"; };
 		04BC82D7232CDDFB002D8176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BC82DA232CDDFB002D8176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04BC82DC232CDDFB002D8176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04BC82E2232CDE7B002D8176 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				04BC82CD232CDDFA002D8176 /* AppDelegate.swift */,
-				04BC82CF232CDDFA002D8176 /* ViewController.swift */,
+				04BC82CF232CDDFA002D8176 /* NoteViewController.swift */,
 				04BC82D1232CDDFA002D8176 /* Main.storyboard */,
 				04BC82D7232CDDFB002D8176 /* Assets.xcassets */,
 				04BC82D9232CDDFB002D8176 /* LaunchScreen.storyboard */,
 				04BC82DC232CDDFB002D8176 /* Info.plist */,
 				04BC82D4232CDDFA002D8176 /* Notebad.xcdatamodeld */,
+				04BC82E2232CDE7B002D8176 /* TableViewController.swift */,
 			);
 			path = Notebad;
 			sourceTree = "<group>";
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BC82D0232CDDFA002D8176 /* ViewController.swift in Sources */,
+				04BC82D0232CDDFA002D8176 /* NoteViewController.swift in Sources */,
 				04BC82CE232CDDFA002D8176 /* AppDelegate.swift in Sources */,
 				04BC82D6232CDDFA002D8176 /* Notebad.xcdatamodeld in Sources */,
+				04BC82E3232CDE7B002D8176 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
