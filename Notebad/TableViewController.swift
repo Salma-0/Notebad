@@ -18,7 +18,6 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(FilePath)
       loadNotes()
 
     }
@@ -37,7 +36,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath)
         // Configure the cell...
-         cell.textLabel?.text = notes[indexPath.row].content
+        cell.textLabel?.text = notes[indexPath.row].content?.string
         return cell
     }
     
@@ -62,7 +61,7 @@ class TableViewController: UITableViewController {
             destinationVC.selectedNote = notes[indexPath.row]
         }else{
             let newNote = Note(context: context)
-            newNote.content = ""
+            newNote.content = NSAttributedString(string: "")
             newNote.date = Date()
             notes.append(newNote)
             destinationVC.selectedNote = newNote
@@ -78,7 +77,7 @@ class TableViewController: UITableViewController {
     
    
     @IBAction func composeNote(_ sender: Any) {
-       
+        
         performSegue(withIdentifier: "goToNote", sender: self)
         
     }
@@ -101,8 +100,8 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            notes.remove(at: indexPath.row)
             context.delete(notes[indexPath.row])
+            notes.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             saveContext()
         }   

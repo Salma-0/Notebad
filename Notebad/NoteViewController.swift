@@ -20,22 +20,23 @@ class NoteViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-                let content = selectedNote?.content!
+        let content = selectedNote?.content?.string
                 if content != nil {
-                    NoteTextView?.text = content as! String
+                    NoteTextView?.attributedText = selectedNote?.content
                 }
-        
+        NoteTextView.allowsEditingTextAttributes = true
 
     }
     
 
 
+
     @IBAction func saveButtonPressed(_ sender: Any) {
+        let text = NoteTextView.attributedText
         if(NoteTextView.text != ""){
-           
-            selectedNote!.content  = NoteTextView?.text
-            
-        }else{
+            selectedNote!.content = text
+        }
+        else{
             context.delete(selectedNote!)
         }
         do{
@@ -43,6 +44,7 @@ class NoteViewController: UIViewController {
         }catch{
             print("Error while saving context, \(error)")
         }
+        navigationController?.popToRootViewController(animated: true)
     }
     
    
